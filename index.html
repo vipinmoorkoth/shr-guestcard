@@ -113,6 +113,18 @@
     margin-bottom: 16px;
     text-align: center;
   }
+  .sync-status {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #2a2a2a;
+    color: #888;
+    margin-left: 10px;
+  }
+  .sync-status.active {
+    background: #1a7a45;
+    color: white;
+  }
   
   /* Main App Styles */
   #main-app {
@@ -201,10 +213,7 @@
     margin-bottom: 24px;
     color: #1a1a1a;
   }
-  .guest-welcome h1 {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
+  .guest-welcome h1 { font-size: 28px; margin-bottom: 8px; }
   .guest-id-badge {
     background: #1a1a1a;
     color: #c9a84c;
@@ -231,55 +240,8 @@
     gap: 10px;
     border-left: 3px solid #c9a84c;
   }
-  .privilege-icon {
-    font-size: 20px;
-  }
-  .privilege-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .status-card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #e8e5de;
-  }
-  .status-badge {
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 700;
-    margin-top: 12px;
-  }
-  .status-active {
-    background: #e6f7ee;
-    color: #1a7a45;
-  }
-  .status-expired {
-    background: #fde8e8;
-    color: #c0392b;
-  }
-  .status-revoked {
-    background: #fde8e8;
-    color: #c0392b;
-  }
-  
-  .qr-section {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    text-align: center;
-    border: 1px solid #e8e5de;
-  }
-  #guest-qr-code {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
+  .privilege-icon { font-size: 20px; }
+  .privilege-name { font-size: 13px; font-weight: 500; color: #333; }
   
   .stats-grid {
     display: grid;
@@ -300,11 +262,7 @@
     letter-spacing: 0.5px;
     margin-bottom: 6px;
   }
-  .stat-val {
-    font-size: 28px;
-    font-weight: 600;
-    color: #1a1a1a;
-  }
+  .stat-val { font-size: 28px; font-weight: 600; color: #1a1a1a; }
   
   .card {
     background: white;
@@ -373,13 +331,8 @@
     font-size: 13px;
     cursor: pointer;
   }
-  .btn-ghost:hover {
-    border-color: #aaa;
-  }
-  .btn-sm {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
+  .btn-ghost:hover { border-color: #aaa; }
+  .btn-sm { padding: 6px 12px; font-size: 12px; }
   
   .priv-grid {
     display: flex;
@@ -397,9 +350,7 @@
     transition: all 0.15s;
     background: white;
   }
-  .priv-tag:hover {
-    border-color: #c9a84c;
-  }
+  .priv-tag:hover { border-color: #c9a84c; }
   .priv-tag.sel {
     background: #1a1a1a;
     color: #c9a84c;
@@ -425,9 +376,7 @@
     border-bottom: 1px solid #f5f4f0;
     vertical-align: middle;
   }
-  table.data tr:hover td {
-    background: #fafaf8;
-  }
+  table.data tr:hover td { background: #fafaf8; }
   
   .badge {
     display: inline-block;
@@ -508,13 +457,8 @@
     border-bottom: 1px solid #f5f4f0;
     font-size: 13px;
   }
-  .detail-label {
-    color: #888;
-  }
-  .detail-val {
-    font-weight: 500;
-    text-align: right;
-  }
+  .detail-label { color: #888; }
+  .detail-val { font-weight: 500; text-align: right; }
   
   .modal-overlay {
     display: none;
@@ -525,9 +469,7 @@
     align-items: center;
     justify-content: center;
   }
-  .modal-overlay.open {
-    display: flex;
-  }
+  .modal-overlay.open { display: flex; }
   .modal-box {
     background: white;
     border-radius: 12px;
@@ -566,10 +508,7 @@
     letter-spacing: 2px;
     color: #c9a84c;
   }
-  .dc-brand {
-    font-size: 14px;
-    font-weight: 700;
-  }
+  .dc-brand { font-size: 14px; font-weight: 700; }
   .dc-location {
     font-size: 8px;
     color: #666;
@@ -586,10 +525,7 @@
     border-radius: 3px;
     margin-bottom: 10px;
   }
-  .dc-name {
-    font-size: 14px;
-    font-weight: 500;
-  }
+  .dc-name { font-size: 14px; font-weight: 500; }
   .dc-id {
     font-size: 10px;
     color: #c9a84c;
@@ -642,9 +578,7 @@
     transition: opacity 0.3s;
     z-index: 999;
   }
-  .toast.show {
-    opacity: 1;
-  }
+  .toast.show { opacity: 1; }
   
   .scan-id-row {
     display: flex;
@@ -669,12 +603,8 @@
   }
   
   @media(max-width:600px) {
-    .stats-grid {
-      grid-template-columns: repeat(2,1fr);
-    }
-    .privilege-grid {
-      grid-template-columns: 1fr;
-    }
+    .stats-grid { grid-template-columns: repeat(2,1fr); }
+    .privilege-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -819,7 +749,7 @@
     <!-- STAFF: Guest Management -->
     <div class="panel" id="panel-staff-guests">
       <div class="card">
-        <div class="card-title">All Registered Guests</div>
+        <div class="card-title">All Registered Guests <span id="sync-status" class="sync-status">Local Mode</span></div>
         <div class="search-row">
           <input type="text" id="staff-search" placeholder="Search by Guest ID, Name, Room, Email..." oninput="renderStaffTable()">
         </div>
@@ -965,125 +895,179 @@
 <div class="toast" id="toast"></div>
 
 <script>
-// ============ DATA ============
-// Guest ID format: SHR-XXXX (unique)
-// Room numbers: Can be any format (e.g., "101", "B-12", "Suite 500")
-let guests = [
-  {
-    id: 'SHR-1001',
-    title: 'Ms.',
-    first: 'Hodan',
-    last: 'Ahmed Muhumed',
-    room: '805',
-    checkin: '2026-04-10',
-    checkout: '2026-04-20',
-    email: 'hodan@example.com',
-    phone: '+97450001234',
-    nationality: 'Somalia',
-    type: 'Privilege Guest',
-    privileges: ['🍳 Free breakfast', '💆 Spa access', '🏊 Pool access', '⏰ Late checkout'],
-    status: 'Active',
-    scans: 5,
-    notes: 'VIP guest - prefers quiet room, celebrating anniversary',
-    issued: '2026-04-10',
-    emailVerified: true
-  },
-  {
-    id: 'SHR-1002',
-    title: 'Mr.',
-    first: 'John',
-    last: 'Smith',
-    room: '1205',
-    checkin: '2026-04-12',
-    checkout: '2026-04-18',
-    email: 'john.smith@example.com',
-    phone: '+97451234567',
-    nationality: 'United Kingdom',
-    type: 'VIP',
-    privileges: ['🍳 Free breakfast', '💆 Spa access', '🏊 Pool access', '💪 Gym access', '💼 Business lounge'],
-    status: 'Active',
-    scans: 3,
-    notes: 'Birthday celebration - upgrade to suite requested',
-    issued: '2026-04-12',
-    emailVerified: true
-  },
-  {
-    id: 'SHR-1003',
-    title: 'Ms.',
-    first: 'Sarah',
-    last: 'Johnson',
-    room: 'B-12',
-    checkin: '2026-04-11',
-    checkout: '2026-04-15',
-    email: 'sarah.j@example.com',
-    phone: '+97459876543',
-    nationality: 'United States',
-    type: 'Diamond Member',
-    privileges: ['🍳 Free breakfast', '💆 Spa access', '🏊 Pool access', '⬆️ Room upgrade', '⏰ Late checkout', '🍾 Complimentary minibar', '💼 Business lounge'],
-    status: 'Active',
-    scans: 8,
-    notes: 'Diamond member - priority service, prefers high floor',
-    issued: '2026-04-11',
-    emailVerified: false
-  },
-  {
-    id: 'SHR-1004',
-    title: 'Dr.',
-    first: 'Ahmed',
-    last: 'Al Mansouri',
-    room: 'Executive Suite 1',
-    checkin: '2026-04-09',
-    checkout: '2026-04-16',
-    email: 'ahmed.almansouri@example.com',
-    phone: '+97457778888',
-    nationality: 'UAE',
-    type: 'Corporate',
-    privileges: ['🍳 Free breakfast', '💪 Gym access', '✈️ Airport transfer', '🍷 F&B discount 20%', '📶 Premium Wi-Fi'],
-    status: 'Active',
-    scans: 2,
-    notes: 'Corporate account - billing to company',
-    issued: '2026-04-09',
-    emailVerified: true
-  },
-  {
-    id: 'SHR-1005',
-    title: 'Mrs.',
-    first: 'Fatima',
-    last: 'Al Thani',
-    room: 'Royal Suite',
-    checkin: '2026-04-13',
-    checkout: '2026-04-22',
-    email: 'fatima@example.com',
-    phone: '+97459999111',
-    nationality: 'Qatar',
-    type: 'Diamond Member',
-    privileges: ['🍳 Free breakfast', '💆 Spa access', '🏊 Pool access', '💪 Gym access', '⏰ Late checkout', '⬆️ Room upgrade', '🍾 Complimentary minibar', '💼 Business lounge', '👔 Laundry service', '⭐ Concierge priority', '🎁 Welcome amenity', '📶 Premium Wi-Fi'],
-    status: 'Active',
-    scans: 1,
-    notes: 'Royal family member - highest priority, private security',
-    issued: '2026-04-13',
-    emailVerified: false
-  }
-];
+// ========== GOOGLE APPS SCRIPT CONNECTION ==========
+const SHEETDB_API = "https://sheetdb.io/api/v1/5vjru2c1f4r8s";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyO5Ic_2HK0P5P9fW8c4cihodKPu5z4MnMLYRK6AXARbQr7JDUKK9SfoZuKGevHWIR6aA/exec";
 
-let staffUsers = [
-  { id: '1', username: 'admin', password: 'admin123', fullname: 'System Administrator', role: 'admin', status: 'active' },
-  { id: '2', username: 'reception', password: 'reception123', fullname: 'Reception Manager', role: 'staff', status: 'active' },
-  { id: '3', username: 'sarah', password: 'sarah123', fullname: 'Sarah Wilson', role: 'staff', status: 'active' }
-];
-
+let useSheetSync = false;
+let guests = [];
+let staffUsers = [];
 let currentUser = null;
 let currentGuest = null;
 let scansToday = 0;
 let activityLog = [];
 
-// Helper: Generate new Guest ID
+// ========== DATA LOADING ==========
+async function loadRemoteGuests() {
+  try {
+    const response = await fetch(`${SHEETDB_API}?action=getGuests`);
+    if (response.ok) {
+      const data = await response.json();
+      if (data && !data.error && data.length > 0) {
+        guests = data.map(row => ({
+          id: row.id || row.Guest_ID,
+          title: row.title || row.Title,
+          first: row.first || row.First_Name,
+          last: row.last || row.Last_Name,
+          room: row.room || row.Room,
+          checkin: row.checkin || row.Check_In,
+          checkout: row.checkout || row.Check_Out,
+          email: row.email || row.Email,
+          phone: row.phone || row.WhatsApp,
+          nationality: row.nationality || row.Nationality,
+          type: row.type || row.Guest_Type,
+          privileges: row.privileges ? (typeof row.privileges === 'string' ? row.privileges.split(',') : row.privileges) : [],
+          status: row.status || row.Status,
+          scans: parseInt(row.scans) || 0,
+          notes: row.notes || row.Notes,
+          issued: row.issued || row.Issued,
+          emailVerified: row.emailVerified === 'true' || row.emailVerified === true
+        }));
+        useSheetSync = true;
+        document.getElementById('sync-status').textContent = '☁️ Live Mode';
+        document.getElementById('sync-status').classList.add('active');
+        console.log("✅ Connected to Google Sheets via Apps Script");
+        showToast("Live data from Google Sheets");
+        saveGuestsLocal();
+        return true;
+      }
+    }
+  } catch(e) {
+    console.warn("Apps Script not configured, using local storage", e);
+  }
+  
+  // Fallback to localStorage
+  const local = localStorage.getItem("shr_guests");
+  if (local) {
+    guests = JSON.parse(local);
+  } else {
+    // Default data
+    guests = [
+      { id:"SHR-1001", title:"Ms.", first:"Hodan", last:"Ahmed", room:"805", checkin:"2026-04-10", checkout:"2026-04-20", email:"hodan@example.com", phone:"+97450001234", nationality:"Somalia", type:"Privilege Guest", privileges:["🍳 Free breakfast","🏊 Pool access"], status:"Active", scans:3, notes:"VIP guest - prefers quiet room", issued:"2026-04-10", emailVerified:true },
+      { id:"SHR-1002", title:"Mr.", first:"John", last:"Smith", room:"1205", checkin:"2026-04-12", checkout:"2026-04-18", email:"john@example.com", phone:"+97451234567", nationality:"UK", type:"VIP", privileges:["🍳 Free breakfast","💪 Gym access"], status:"Active", scans:2, notes:"Birthday celebration", issued:"2026-04-12", emailVerified:true },
+      { id:"SHR-1003", title:"Ms.", first:"Sarah", last:"Johnson", room:"B-12", checkin:"2026-04-11", checkout:"2026-04-15", email:"sarah@example.com", phone:"+97459876543", nationality:"USA", type:"Diamond Member", privileges:["🍳 Free breakfast","💆 Spa access","🏊 Pool access","⬆️ Room upgrade"], status:"Active", scans:5, notes:"Diamond member", issued:"2026-04-11", emailVerified:false }
+    ];
+  }
+  return false;
+}
+
+async function syncGuestsToSheet() {
+  if (!useSheetSync) return false;
+  try {
+    // Sync only the latest guest for demo purposes
+    const lastGuest = guests[guests.length - 1];
+    if (lastGuest && !lastGuest._synced) {
+      const response = await fetch(SHEETDB_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'addGuest',
+          guest: {
+            ...lastGuest,
+            privileges: Array.isArray(lastGuest.privileges) ? lastGuest.privileges.join(',') : lastGuest.privileges
+          }
+        })
+      });
+      if (response.ok) {
+        lastGuest._synced = true;
+        console.log("Guest synced to sheet");
+      }
+    }
+    localStorage.setItem("shr_guests", JSON.stringify(guests));
+    return true;
+  } catch(e) {
+    console.error("Sync error:", e);
+    return false;
+  }
+}
+
+async function updateGuestInSheet(guestId, updates) {
+  if (!useSheetSync) return false;
+  try {
+    const response = await fetch(SHEETDB_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        action: 'updateGuest',
+        guestId: guestId,
+        updates: updates
+      })
+    });
+    return response.ok;
+  } catch(e) {
+    console.error("Update error:", e);
+    return false;
+  }
+}
+
+function saveGuestsLocal() {
+  localStorage.setItem("shr_guests", JSON.stringify(guests));
+  syncGuestsToSheet();
+}
+
+// ========== STAFF USERS ==========
+function loadStaffUsers() {
+  const saved = localStorage.getItem("shr_staff");
+  if (saved) {
+    staffUsers = JSON.parse(saved);
+  } else {
+    staffUsers = [
+      { id: '1', username: 'admin', password: 'admin123', fullname: 'System Administrator', role: 'admin', status: 'active' },
+      { id: '2', username: 'reception', password: 'reception123', fullname: 'Reception Manager', role: 'staff', status: 'active' },
+      { id: '3', username: 'sarah', password: 'sarah123', fullname: 'Sarah Wilson', role: 'staff', status: 'active' }
+    ];
+    saveStaffUsers();
+  }
+}
+
+function saveStaffUsers() {
+  localStorage.setItem("shr_staff", JSON.stringify(staffUsers));
+}
+
+// ========== HELPER FUNCTIONS ==========
 function generateGuestId() {
   const lastId = guests.length > 0 ? Math.max(...guests.map(g => parseInt(g.id.split('-')[1]))) : 1000;
   return `SHR-${lastId + 1}`;
 }
 
-// ============ LOGIN FUNCTIONS ============
+function addActivityLog(message, type) {
+  activityLog.unshift({
+    time: new Date().toLocaleString(),
+    message: message,
+    type: type
+  });
+  
+  const logContainer = document.getElementById('activity-log');
+  if (logContainer && activityLog.length > 0) {
+    logContainer.innerHTML = activityLog.slice(0, 20).map(log => `
+      <div class="activity-item">
+        <span>${log.message}</span>
+        <span class="activity-time">${log.time}</span>
+      </div>
+    `).join('');
+    if (activityLog.length === 0) {
+      logContainer.innerHTML = '<div class="empty-state">No activity yet</div>';
+    }
+  }
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
 function switchLoginTab(tab) {
   const guestForm = document.getElementById('guest-login-form');
   const staffForm = document.getElementById('staff-login-form');
@@ -1102,6 +1086,7 @@ function switchLoginTab(tab) {
   }
 }
 
+// ========== GUEST LOGIN ==========
 function guestLogin() {
   const guestId = document.getElementById('guest-id').value.trim().toUpperCase();
   const lastName = document.getElementById('guest-lastname').value.trim();
@@ -1134,52 +1119,6 @@ function guestLogin() {
   }
 }
 
-function staffLogin() {
-  const username = document.getElementById('staff-username').value.trim();
-  const password = document.getElementById('staff-password').value;
-  const errorDiv = document.getElementById('login-error');
-  
-  const staff = staffUsers.find(u => u.username === username && u.password === password && u.status === 'active');
-  
-  if (staff) {
-    currentUser = { type: 'staff', data: staff };
-    
-    document.getElementById('login-page').style.display = 'none';
-    document.getElementById('main-app').classList.add('active');
-    document.getElementById('app-subtitle').textContent = 'Staff Dashboard';
-    document.getElementById('user-name').textContent = staff.fullname;
-    document.getElementById('user-role').textContent = staff.role === 'admin' ? 'Administrator' : 'Staff';
-    document.getElementById('user-avatar').textContent = staff.fullname.charAt(0);
-    
-    document.querySelectorAll('.staff-only').forEach(btn => btn.style.display = 'block');
-    
-    showPanel('staff-guests');
-    renderStaffTable();
-    addActivityLog(`${staff.fullname} logged in`, 'staff');
-    showToast(`Welcome, ${staff.fullname}!`);
-  } else {
-    errorDiv.textContent = 'Invalid username or password.';
-    errorDiv.style.display = 'block';
-    setTimeout(() => errorDiv.style.display = 'none', 3000);
-  }
-}
-
-function logout() {
-  if (currentUser?.type === 'staff') {
-    addActivityLog(`${currentUser.data.fullname} logged out`, 'staff');
-  }
-  currentUser = null;
-  currentGuest = null;
-  document.getElementById('login-page').style.display = 'flex';
-  document.getElementById('main-app').classList.remove('active');
-  document.getElementById('guest-id').value = '';
-  document.getElementById('guest-lastname').value = '';
-  document.getElementById('staff-username').value = '';
-  document.getElementById('staff-password').value = '';
-  switchLoginTab('guest');
-}
-
-// ============ GUEST DASHBOARD ============
 function loadGuestDashboard() {
   if (!currentGuest) return;
   
@@ -1227,7 +1166,7 @@ function loadGuestDashboard() {
   qrContainer.innerHTML = '<div id="qr-code-inner"></div>';
   setTimeout(() => {
     try {
-      const qrData = JSON.stringify({ id: g.id, name: `${g.first} ${g.last}`, room: g.room });
+      const qrData = `${GOOGLE_SCRIPT_URL}?id=${g.id}`;
       new QRCode(document.getElementById('qr-code-inner'), {
         text: qrData, width: 180, height: 180,
         colorDark: '#1a1a1a', colorLight: '#ffffff'
@@ -1251,7 +1190,53 @@ function downloadGuestQR() {
   }
 }
 
-// ============ STAFF FUNCTIONS ============
+// ========== STAFF LOGIN ==========
+function staffLogin() {
+  const username = document.getElementById('staff-username').value.trim();
+  const password = document.getElementById('staff-password').value;
+  const errorDiv = document.getElementById('login-error');
+  
+  const staff = staffUsers.find(u => u.username === username && u.password === password && u.status === 'active');
+  
+  if (staff) {
+    currentUser = { type: 'staff', data: staff };
+    
+    document.getElementById('login-page').style.display = 'none';
+    document.getElementById('main-app').classList.add('active');
+    document.getElementById('app-subtitle').textContent = 'Staff Dashboard';
+    document.getElementById('user-name').textContent = staff.fullname;
+    document.getElementById('user-role').textContent = staff.role === 'admin' ? 'Administrator' : 'Staff';
+    document.getElementById('user-avatar').textContent = staff.fullname.charAt(0);
+    
+    document.querySelectorAll('.staff-only').forEach(btn => btn.style.display = 'block');
+    
+    showPanel('staff-guests');
+    renderStaffTable();
+    addActivityLog(`${staff.fullname} logged in`, 'staff');
+    showToast(`Welcome, ${staff.fullname}!`);
+  } else {
+    errorDiv.textContent = 'Invalid username or password.';
+    errorDiv.style.display = 'block';
+    setTimeout(() => errorDiv.style.display = 'none', 3000);
+  }
+}
+
+function logout() {
+  if (currentUser?.type === 'staff') {
+    addActivityLog(`${currentUser.data.fullname} logged out`, 'staff');
+  }
+  currentUser = null;
+  currentGuest = null;
+  document.getElementById('login-page').style.display = 'flex';
+  document.getElementById('main-app').classList.remove('active');
+  document.getElementById('guest-id').value = '';
+  document.getElementById('guest-lastname').value = '';
+  document.getElementById('staff-username').value = '';
+  document.getElementById('staff-password').value = '';
+  switchLoginTab('guest');
+}
+
+// ========== STAFF PANEL FUNCTIONS ==========
 function showPanel(panelId) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.getElementById(`panel-${panelId}`).classList.add('active');
@@ -1331,9 +1316,18 @@ function toggleGuestStatus(guestId) {
     const oldStatus = guest.status;
     guest.status = guest.status === 'Active' ? 'Revoked' : 'Active';
     addActivityLog(`${currentUser?.data?.fullname} changed ${guest.first} ${guest.last} status from ${oldStatus} to ${guest.status}`, 'staff');
+    saveGuestsLocal();
     renderStaffTable();
     showToast(`Guest ${guest.id} is now ${guest.status}`);
   }
+}
+
+function togglePriv(el) {
+  el.classList.toggle('sel');
+}
+
+function getSelectedPrivileges() {
+  return [...document.querySelectorAll('#priv-list .priv-tag.sel')].map(e => e.textContent);
 }
 
 function staffAddGuest() {
@@ -1365,22 +1359,16 @@ function staffAddGuest() {
     scans: 0,
     notes: document.getElementById('f-notes').value.trim(),
     issued: new Date().toISOString().split('T')[0],
-    emailVerified: false
+    emailVerified: false,
+    _synced: false
   };
   
   guests.push(newGuest);
   addActivityLog(`${currentUser?.data?.fullname} added new guest: ${first} ${last} (${newId}) - Room: ${room}`, 'staff');
+  saveGuestsLocal();
   showToast(`Guest ${first} ${last} added! ID: ${newId} | Room: ${room}`);
   clearStaffForm();
   renderStaffTable();
-}
-
-function getSelectedPrivileges() {
-  return [...document.querySelectorAll('#priv-list .priv-tag.sel')].map(e => e.textContent);
-}
-
-function togglePriv(el) {
-  el.classList.toggle('sel');
 }
 
 function clearStaffForm() {
@@ -1419,6 +1407,7 @@ function displayScanResult(guest) {
   guest.scans++;
   scansToday++;
   addActivityLog(`${currentUser?.data?.fullname} scanned ${guest.first} ${guest.last} (${guest.id}) - Room ${guest.room}`, 'staff');
+  saveGuestsLocal();
   
   const isValid = guest.status === 'Active';
   const today = new Date();
@@ -1452,7 +1441,7 @@ function displayScanResult(guest) {
   `;
 }
 
-// ============ STAFF ADMIN FUNCTIONS ============
+// ========== STAFF ADMIN FUNCTIONS ==========
 function renderStaffUsersTable() {
   const tbody = document.getElementById('staff-users-tbody');
   if (!staffUsers.length) {
@@ -1510,6 +1499,7 @@ function addStaffMember() {
     status: 'active'
   });
   
+  saveStaffUsers();
   renderStaffUsersTable();
   closeAddStaffModal();
   addActivityLog(`${currentUser?.data?.fullname} added staff member: ${username} (${role})`, 'staff');
@@ -1522,6 +1512,7 @@ function resetStaffPassword(userId) {
     const newPass = prompt(`Enter new password for ${user.username}:`);
     if (newPass && newPass.length >= 4) {
       user.password = newPass;
+      saveStaffUsers();
       renderStaffUsersTable();
       showToast(`Password reset for ${user.username}`);
     } else if (newPass) {
@@ -1534,6 +1525,7 @@ function toggleStaffStatus(userId) {
   const user = staffUsers.find(u => u.id === userId);
   if (user && user.username !== 'admin') {
     user.status = user.status === 'active' ? 'inactive' : 'active';
+    saveStaffUsers();
     renderStaffUsersTable();
     addActivityLog(`${currentUser?.data?.fullname} ${user.status === 'active' ? 'enabled' : 'disabled'} staff: ${user.username}`, 'staff');
     showToast(`${user.username} is now ${user.status}`);
@@ -1544,52 +1536,22 @@ function deleteStaffUser(userId) {
   const user = staffUsers.find(u => u.id === userId);
   if (user && user.username !== 'admin' && confirm(`Delete staff member "${user.username}"?`)) {
     staffUsers = staffUsers.filter(u => u.id !== userId);
+    saveStaffUsers();
     renderStaffUsersTable();
     addActivityLog(`${currentUser?.data?.fullname} deleted staff: ${user.username}`, 'staff');
     showToast(`Staff ${user.username} deleted`);
   }
 }
 
-// ============ UTILITIES ============
-function addActivityLog(message, type) {
-  activityLog.unshift({
-    time: new Date().toLocaleString(),
-    message: message,
-    type: type
-  });
+// ========== INITIALIZATION ==========
+async function init() {
+  loadStaffUsers();
+  await loadRemoteGuests();
   
-  const logContainer = document.getElementById('activity-log');
-  if (logContainer && activityLog.length > 0) {
-    logContainer.innerHTML = activityLog.slice(0, 20).map(log => `
-      <div class="activity-item">
-        <span>${log.message}</span>
-        <span class="activity-time">${log.time}</span>
-      </div>
-    `).join('');
-    if (activityLog.length === 0) {
-      logContainer.innerHTML = '<div class="empty-state">No activity yet</div>';
-    }
-  }
-}
-
-function showToast(msg) {
-  const toast = document.getElementById('toast');
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
-}
-
-// Initialize
-function init() {
   const today = new Date().toISOString().split('T')[0];
   const nextWeek = new Date(Date.now() + 7 * 86400000).toISOString().split('T')[0];
   if (document.getElementById('f-checkin')) document.getElementById('f-checkin').value = today;
   if (document.getElementById('f-checkout')) document.getElementById('f-checkout').value = nextWeek;
-  
-  // Set default admin email
-  if (document.getElementById('admin-email')) {
-    document.getElementById('admin-email').value = 'admin@steigenberger.com';
-  }
 }
 
 init();
