@@ -113,97 +113,198 @@
     margin-bottom: 16px;
     text-align: center;
   }
-  .sync-status {
-    font-size: 10px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background: #2a2a2a;
-    color: #888;
-    margin-left: 10px;
-  }
-  .sync-status.active {
-    background: #1a7a45;
-    color: white;
+  .info-note {
+    background: #e8f4f8;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #1a7a45;
+    margin-bottom: 12px;
   }
   
-  /* Main App Styles */
+  /* Main App Layout with Sidebar */
   #main-app {
     display: none;
+    min-height: 100vh;
   }
   #main-app.active {
-    display: block;
+    display: flex;
   }
   
-  .header {
+  /* Sidebar Styles */
+  .sidebar {
+    width: 280px;
     background: #1a1a1a;
-    padding: 14px 24px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  
+  .sidebar-header {
+    padding: 24px 20px;
+    border-bottom: 1px solid #2a2a2a;
+    text-align: center;
+  }
+  .sidebar-logo {
+    background: #c9a84c;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .sidebar-header h3 {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 4px;
+  }
+  .sidebar-header p {
+    font-size: 11px;
+    color: #888;
+  }
+  
+  .user-profile {
+    padding: 20px;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sidebar-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #c9a84c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .user-info-sidebar {
+    flex: 1;
+  }
+  .user-name-sidebar {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+  .user-role-sidebar {
+    font-size: 11px;
+    color: #c9a84c;
+    margin-top: 2px;
+  }
+  .logout-sidebar {
+    background: transparent;
+    border: 1px solid #555;
+    color: #888;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  .logout-sidebar:hover {
+    border-color: #c9a84c;
+    color: #c9a84c;
+  }
+  
+  .nav-menu {
+    flex: 1;
+    padding: 20px 0;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: #888;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s;
+    border-left: 3px solid transparent;
+  }
+  .nav-item:hover {
+    background: #2a2a2a;
+    color: #c9a84c;
+  }
+  .nav-item.active {
+    background: #2a2a2a;
+    color: #c9a84c;
+    border-left-color: #c9a84c;
+  }
+  .nav-icon {
+    font-size: 20px;
+    width: 28px;
+    text-align: center;
+  }
+  .nav-label {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 10px;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    margin-left: 280px;
+    min-height: 100vh;
+    background: #f5f4f0;
+  }
+  
+  .top-bar {
+    background: white;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e8e5de;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
   }
-  .logo { display: flex; align-items: center; gap: 12px; }
-  .logo-badge { background: #c9a84c; color: #1a1a1a; font-size: 11px; font-weight: 700; padding: 5px 8px; border-radius: 4px; letter-spacing: 1px; }
-  .logo-text { color: white; font-size: 14px; font-weight: 500; }
-  .logo-sub { color: #888; font-size: 11px; }
-  
-  .user-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #2a2a2a;
-    padding: 8px 16px;
-    border-radius: 8px;
-  }
-  .user-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #c9a84c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+  .page-title {
+    font-size: 18px;
+    font-weight: 600;
     color: #1a1a1a;
   }
-  .user-details { flex: 1; }
-  .user-name { color: white; font-size: 13px; font-weight: 600; }
-  .user-role { color: #c9a84c; font-size: 11px; }
-  .logout-btn {
-    background: transparent;
-    color: #888;
-    border: 1px solid #555;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 11px;
-    cursor: pointer;
+  .sync-status {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #e8e5de;
+    color: #666;
   }
-  .logout-btn:hover { color: #c9a84c; border-color: #c9a84c; }
+  .sync-status.active {
+    background: #1a7a45;
+    color: white;
+  }
   
-  .nav {
-    display: flex;
-    gap: 4px;
-    background: #1a1a1a;
-    padding: 0 24px 12px 24px;
-    flex-wrap: wrap;
+  .container {
+    padding: 24px;
+    max-width: 1200px;
   }
-  .nav-btn {
-    background: transparent;
-    color: #888;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.15s;
+  .panel {
+    display: none;
   }
-  .nav-btn:hover { color: #c9a84c; background: #2a2a2a; }
-  .nav-btn.active { background: #c9a84c; color: #1a1a1a; }
-  
-  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
-  .panel { display: none; }
-  .panel.active { display: block; }
+  .panel.active {
+    display: block;
+  }
   
   /* Guest Dashboard Specific Styles */
   .guest-welcome {
@@ -213,7 +314,10 @@
     margin-bottom: 24px;
     color: #1a1a1a;
   }
-  .guest-welcome h1 { font-size: 28px; margin-bottom: 8px; }
+  .guest-welcome h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
   .guest-id-badge {
     background: #1a1a1a;
     color: #c9a84c;
@@ -263,6 +367,9 @@
     margin-bottom: 6px;
   }
   .stat-val { font-size: 28px; font-weight: 600; color: #1a1a1a; }
+  .status-active { color: #1a7a45; }
+  .status-expired { color: #c0392b; }
+  .status-revoked { color: #c0392b; }
   
   .card {
     background: white;
@@ -490,57 +597,17 @@
     margin-top: 18px;
   }
   
-  .qr-layout {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .digital-card {
-    background: #1a1a1a;
+  .qr-section {
+    background: white;
     border-radius: 12px;
-    padding: 18px;
-    width: 240px;
-    color: white;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #e8e5de;
   }
-  .dc-header {
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: #c9a84c;
-  }
-  .dc-brand { font-size: 14px; font-weight: 700; }
-  .dc-location {
-    font-size: 8px;
-    color: #666;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-  }
-  .dc-badge {
-    display: inline-block;
-    background: #c9a84c;
-    color: #1a1a1a;
-    font-size: 8px;
-    font-weight: 800;
-    padding: 4px 9px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
-  .dc-name { font-size: 14px; font-weight: 500; }
-  .dc-id {
-    font-size: 10px;
-    color: #c9a84c;
-    margin-top: 2px;
-  }
-  .dc-room {
-    font-size: 10px;
-    color: #888;
-    margin-top: 8px;
-  }
-  .dc-privs {
-    font-size: 9px;
-    color: #666;
-    margin-top: 8px;
-    line-height: 1.5;
+  #guest-qr-code {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
   
   .activity-item {
@@ -593,18 +660,30 @@
     width: 220px;
   }
   
-  .info-note {
-    background: #e8f4f8;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    color: #1a7a45;
-    margin-bottom: 12px;
-  }
-  
-  @media(max-width:600px) {
-    .stats-grid { grid-template-columns: repeat(2,1fr); }
-    .privilege-grid { grid-template-columns: 1fr; }
+  @media(max-width: 768px) {
+    .sidebar {
+      width: 70px;
+    }
+    .sidebar-header h3, .sidebar-header p, .nav-label, .user-info-sidebar, .sidebar-footer {
+      display: none;
+    }
+    .user-profile {
+      justify-content: center;
+    }
+    .nav-item {
+      justify-content: center;
+      padding: 12px;
+    }
+    .nav-icon {
+      font-size: 22px;
+      width: auto;
+    }
+    .main-content {
+      margin-left: 70px;
+    }
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
 </head>
@@ -655,207 +734,238 @@
   </div>
 </div>
 
-<!-- Main Application -->
+<!-- Main Application with Sidebar -->
 <div id="main-app">
-  <div class="header">
-    <div class="logo">
-      <div class="logo-badge">SHR</div>
-      <div>
-        <div class="logo-text">Steigenberger Hotel & Residence — Doha</div>
-        <div class="logo-sub" id="app-subtitle">Digital Privilege Guest Card System</div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">STEIGENBERGER</div>
+      <h3>Digital Guest Card</h3>
+      <p>Hotel & Residence Doha</p>
+    </div>
+    
+    <div class="user-profile">
+      <div class="sidebar-avatar" id="sidebar-avatar">G</div>
+      <div class="user-info-sidebar">
+        <div class="user-name-sidebar" id="sidebar-name">Guest User</div>
+        <div class="user-role-sidebar" id="sidebar-role">Guest</div>
+      </div>
+      <button class="logout-sidebar" onclick="logout()">Logout</button>
+    </div>
+    
+    <div class="nav-menu" id="nav-menu">
+      <!-- Guest Menu Items (only My Digital Card) -->
+      <div class="nav-item guest-only active" data-panel="guest-dashboard" onclick="showPanel('guest-dashboard')">
+        <div class="nav-icon">📱</div>
+        <div class="nav-label">My Digital Card</div>
+      </div>
+      
+      <!-- Staff Menu Items -->
+      <div class="nav-item staff-only" data-panel="staff-guests" onclick="showPanel('staff-guests')">
+        <div class="nav-icon">👥</div>
+        <div class="nav-label">Guest Management</div>
+      </div>
+      <div class="nav-item staff-only" data-panel="staff-add" onclick="showPanel('staff-add')">
+        <div class="nav-icon">➕</div>
+        <div class="nav-label">Add Guest</div>
+      </div>
+      <div class="nav-item staff-only" data-panel="staff-scanner" onclick="showPanel('staff-scanner')">
+        <div class="nav-icon">📷</div>
+        <div class="nav-label">QR Scanner</div>
+      </div>
+      <div class="nav-item staff-only" data-panel="staff-admin" onclick="showPanel('staff-admin')">
+        <div class="nav-icon">⚙️</div>
+        <div class="nav-label">Admin Panel</div>
       </div>
     </div>
-    <div class="user-info">
-      <div class="user-avatar" id="user-avatar">G</div>
-      <div class="user-details">
-        <div class="user-name" id="user-name">Guest User</div>
-        <div class="user-role" id="user-role">Guest</div>
-      </div>
-      <button class="logout-btn" onclick="logout()">Logout</button>
+    
+    <div class="sidebar-footer">
+      © 2026 Steigenberger Hotel<br>All rights reserved.
     </div>
   </div>
-  <div class="nav" id="main-nav">
-    <button class="nav-btn active" onclick="showPanel('guest-dashboard')">My Digital Card</button>
-    <button class="nav-btn staff-only" onclick="showPanel('staff-guests')">Guest Management</button>
-    <button class="nav-btn staff-only" onclick="showPanel('staff-add')">Add Guest</button>
-    <button class="nav-btn staff-only" onclick="showPanel('staff-scanner')">QR Scanner</button>
-    <button class="nav-btn staff-only" onclick="showPanel('staff-admin')">Admin Panel</button>
-  </div>
-
-  <div class="container">
-    
-    <!-- GUEST DASHBOARD -->
-    <div class="panel active" id="panel-guest-dashboard">
-      <div class="guest-welcome" id="guest-welcome">
-        <h1 id="guest-greeting">Welcome, Guest!</h1>
-        <p>Your Digital Privilege Card is ready. Present your QR code at any hotel service counter.</p>
-        <div class="guest-id-badge" id="guest-id-badge">Guest ID: ---</div>
-      </div>
-      
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-label">Card Status</div>
-          <div class="stat-val" id="guest-status">---</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Valid Until</div>
-          <div class="stat-val" id="guest-valid-until">---</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Room Number</div>
-          <div class="stat-val" id="guest-room">---</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Guest Type</div>
-          <div class="stat-val" id="guest-type">---</div>
-        </div>
-      </div>
-      
-      <div class="qr-section">
-        <div class="card-title">Your Digital QR Code</div>
-        <div id="guest-qr-code"></div>
-        <p style="font-size:12px; color:#888; margin-top:12px;">Scan this QR code at hotel facilities to access your privileges</p>
-        <button class="btn-primary btn-sm" onclick="downloadGuestQR()">Download QR Code</button>
-      </div>
-      
-      <div class="card">
-        <div class="card-title">Your Privileges & Benefits</div>
-        <div id="guest-privileges" class="privilege-grid">
-          <div class="empty-state">Loading your privileges...</div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-title">Stay Information</div>
-        <div class="detail-row"><span class="detail-label">Check-in Date</span><span class="detail-val" id="guest-checkin">---</span></div>
-        <div class="detail-row"><span class="detail-label">Check-out Date</span><span class="detail-val" id="guest-checkout">---</span></div>
-        <div class="detail-row"><span class="detail-label">Nights of Stay</span><span class="detail-val" id="guest-nights">---</span></div>
-        <div class="detail-row"><span class="detail-label">Email Verification</span><span class="detail-val" id="guest-verified">---</span></div>
-        <div class="detail-row"><span class="detail-label">Total Scans</span><span class="detail-val" id="guest-scans">---</span></div>
-      </div>
-      
-      <div class="card">
-        <div class="card-title">Special Notes / Requests</div>
-        <div id="guest-notes" class="empty-state">No special notes</div>
-      </div>
-      
-      <div class="card">
-        <div class="card-title">Need Assistance?</div>
-        <p style="font-size:13px; margin-bottom:12px;">Contact our guest relations team for any questions about your privileges or stay.</p>
-        <p style="font-size:12px; color:#666;">📞 +974 4020 1666 | ✉️ info.steigenbergerdoha@steigenberger.com</p>
-      </div>
+  
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="top-bar">
+      <div class="page-title" id="page-title">My Digital Card</div>
+      <div id="sync-status" class="sync-status">Local Mode</div>
     </div>
     
-    <!-- STAFF: Guest Management -->
-    <div class="panel" id="panel-staff-guests">
-      <div class="card">
-        <div class="card-title">All Registered Guests <span id="sync-status" class="sync-status">Local Mode</span></div>
-        <div class="search-row">
-          <input type="text" id="staff-search" placeholder="Search by Guest ID, Name, Room, Email..." oninput="renderStaffTable()">
+    <div class="container">
+      
+      <!-- GUEST DASHBOARD -->
+      <div class="panel active" id="panel-guest-dashboard">
+        <div class="guest-welcome" id="guest-welcome">
+          <h1 id="guest-greeting">Welcome, Guest!</h1>
+          <p>Your Digital Privilege Card is ready. Present your QR code at any hotel service counter.</p>
+          <div class="guest-id-badge" id="guest-id-badge">Guest ID: ---</div>
         </div>
-        <div style="overflow-x:auto;">
-          <table class="data">
-            <thead>
-              <tr><th>Guest ID</th><th>Name</th><th>Room</th><th>Type</th><th>Status</th><th>Verified</th><th>Scans</th><th>Actions</th></tr>
-            </thead>
-            <tbody id="staff-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    
-    <!-- STAFF: Add Guest -->
-    <div class="panel" id="panel-staff-add">
-      <div class="card">
-        <div class="card-title">Add New Guest</div>
-        <div class="info-note">
-          ℹ️ Guest ID is auto-generated. Room number can be any format (e.g., 101, B-12, Suite 500).
-        </div>
-        <div class="form-grid">
-          <div class="field"><label>Title</label>
-            <select id="f-title">
-              <option>Mr.</option><option>Ms.</option><option>Mrs.</option><option>Dr.</option><option>H.E.</option>
-            </select>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Card Status</div>
+            <div class="stat-val" id="guest-status">---</div>
           </div>
-          <div class="field"><label>First Name *</label><input type="text" id="f-first" placeholder="First name"></div>
-          <div class="field"><label>Last Name *</label><input type="text" id="f-last" placeholder="Last name"></div>
-          <div class="field"><label>Room Number *</label><input type="text" id="f-room" placeholder="e.g., 101, B-12, Suite 500"></div>
-          <div class="field"><label>Check-in Date</label><input type="date" id="f-checkin"></div>
-          <div class="field"><label>Check-out Date</label><input type="date" id="f-checkout"></div>
-          <div class="field"><label>Email *</label><input type="email" id="f-email" placeholder="guest@example.com"></div>
-          <div class="field"><label>WhatsApp</label><input type="tel" id="f-phone" placeholder="+974XXXXXXXX"></div>
-          <div class="field"><label>Nationality</label><input type="text" id="f-nationality" placeholder="Country"></div>
-          <div class="field"><label>Guest Type</label>
-            <select id="f-type">
-              <option>Standard Guest</option><option>Privilege Guest</option>
-              <option>VIP</option><option>Corporate</option><option>Diamond Member</option>
-            </select>
+          <div class="stat-card">
+            <div class="stat-label">Valid Until</div>
+            <div class="stat-val" id="guest-valid-until">---</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Room Number</div>
+            <div class="stat-val" id="guest-room">---</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Guest Type</div>
+            <div class="stat-val" id="guest-type">---</div>
+          </div>
+        </div>
+        
+        <div class="qr-section">
+          <div class="card-title">Your Digital QR Code</div>
+          <div id="guest-qr-code"></div>
+          <p style="font-size:12px; color:#888; margin-top:12px;">Scan this QR code at hotel facilities to access your privileges</p>
+          <button class="btn-primary btn-sm" onclick="downloadGuestQR()">Download QR Code</button>
+        </div>
+        
+        <div class="card">
+          <div class="card-title">Your Privileges & Benefits</div>
+          <div id="guest-privileges" class="privilege-grid">
+            <div class="empty-state">Loading your privileges...</div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-title">Stay Information</div>
+          <div class="detail-row"><span class="detail-label">Check-in Date</span><span class="detail-val" id="guest-checkin">---</span></div>
+          <div class="detail-row"><span class="detail-label">Check-out Date</span><span class="detail-val" id="guest-checkout">---</span></div>
+          <div class="detail-row"><span class="detail-label">Nights of Stay</span><span class="detail-val" id="guest-nights">---</span></div>
+          <div class="detail-row"><span class="detail-label">Email Verification</span><span class="detail-val" id="guest-verified">---</span></div>
+          <div class="detail-row"><span class="detail-label">Total Scans</span><span class="detail-val" id="guest-scans">---</span></div>
+        </div>
+        
+        <div class="card">
+          <div class="card-title">Special Notes / Requests</div>
+          <div id="guest-notes" class="empty-state">No special notes</div>
+        </div>
+        
+        <div class="card">
+          <div class="card-title">Need Assistance?</div>
+          <p style="font-size:13px; margin-bottom:12px;">Contact our guest relations team for any questions about your privileges or stay.</p>
+          <p style="font-size:12px; color:#666;">📞 +974 4020 1666 | ✉️ info.steigenbergerdoha@steigenberger.com</p>
+        </div>
+      </div>
+      
+      <!-- STAFF: Guest Management -->
+      <div class="panel" id="panel-staff-guests">
+        <div class="card">
+          <div class="card-title">All Registered Guests</div>
+          <div class="search-row">
+            <input type="text" id="staff-search" placeholder="Search by Guest ID, Name, Room, Email..." oninput="renderStaffTable()">
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data">
+              <thead>
+                <tr><th>Guest ID</th><th>Name</th><th>Room</th><th>Type</th><th>Status</th><th>Verified</th><th>Scans</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="staff-tbody"></tbody>
+            </table>
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-title">Privileges (Click to select)</div>
-        <div class="priv-grid" id="priv-list">
-          <div class="priv-tag" onclick="togglePriv(this)">🍳 Free breakfast</div>
-          <div class="priv-tag" onclick="togglePriv(this)">💆 Spa access</div>
-          <div class="priv-tag" onclick="togglePriv(this)">🏊 Pool access</div>
-          <div class="priv-tag" onclick="togglePriv(this)">💪 Gym access</div>
-          <div class="priv-tag" onclick="togglePriv(this)">⏰ Late checkout</div>
-          <div class="priv-tag" onclick="togglePriv(this)">🕐 Early check-in</div>
-          <div class="priv-tag" onclick="togglePriv(this)">✈️ Airport transfer</div>
-          <div class="priv-tag" onclick="togglePriv(this)">🍷 F&B discount 20%</div>
-          <div class="priv-tag" onclick="togglePriv(this)">⬆️ Room upgrade</div>
-          <div class="priv-tag" onclick="togglePriv(this)">🍾 Complimentary minibar</div>
-          <div class="priv-tag" onclick="togglePriv(this)">💼 Business lounge</div>
-          <div class="priv-tag" onclick="togglePriv(this)">👔 Laundry service</div>
-          <div class="priv-tag" onclick="togglePriv(this)">⭐ Concierge priority</div>
-          <div class="priv-tag" onclick="togglePriv(this)">🎁 Welcome amenity</div>
-          <div class="priv-tag" onclick="togglePriv(this)">📶 Premium Wi-Fi</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">Special Notes</div>
-        <textarea id="f-notes" rows="3" style="width:100%; padding:9px; border:1px solid #ddd; border-radius:7px;" placeholder="Any special requests, VIP notes, dietary requirements..."></textarea>
-      </div>
-      <button class="btn-primary" onclick="staffAddGuest()">Save Guest & Generate Card</button>
-    </div>
-    
-    <!-- STAFF: Scanner -->
-    <div class="panel" id="panel-staff-scanner">
-      <div class="card">
-        <div class="card-title">QR Code Scanner / Guest Lookup</div>
-        <div class="scanner-box" onclick="simulateScan()">
-          <div class="scan-icon">📷</div>
-          <div style="font-weight:600; margin:8px 0;">Click to simulate a scan</div>
-          <div class="scan-id-row" onclick="event.stopPropagation()">
-            <input type="text" id="staff-scan-id" placeholder="Search by Guest ID, Room, or Name">
-            <button class="btn-ghost" onclick="staffLookupGuest()">Lookup</button>
+      
+      <!-- STAFF: Add Guest -->
+      <div class="panel" id="panel-staff-add">
+        <div class="card">
+          <div class="card-title">Add New Guest</div>
+          <div class="info-note">
+            ℹ️ Guest ID is auto-generated. Room number can be any format (e.g., 101, B-12, Suite 500).
+          </div>
+          <div class="form-grid">
+            <div class="field"><label>Title</label>
+              <select id="f-title">
+                <option>Mr.</option><option>Ms.</option><option>Mrs.</option><option>Dr.</option><option>H.E.</option>
+              </select>
+            </div>
+            <div class="field"><label>First Name *</label><input type="text" id="f-first" placeholder="First name"></div>
+            <div class="field"><label>Last Name *</label><input type="text" id="f-last" placeholder="Last name"></div>
+            <div class="field"><label>Room Number *</label><input type="text" id="f-room" placeholder="e.g., 101, B-12, Suite 500"></div>
+            <div class="field"><label>Check-in Date</label><input type="date" id="f-checkin"></div>
+            <div class="field"><label>Check-out Date</label><input type="date" id="f-checkout"></div>
+            <div class="field"><label>Email *</label><input type="email" id="f-email" placeholder="guest@example.com"></div>
+            <div class="field"><label>WhatsApp</label><input type="tel" id="f-phone" placeholder="+974XXXXXXXX"></div>
+            <div class="field"><label>Nationality</label><input type="text" id="f-nationality" placeholder="Country"></div>
+            <div class="field"><label>Guest Type</label>
+              <select id="f-type">
+                <option>Standard Guest</option><option>Privilege Guest</option>
+                <option>VIP</option><option>Corporate</option><option>Diamond Member</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div id="staff-scan-result"></div>
-      </div>
-    </div>
-    
-    <!-- STAFF: Admin Panel -->
-    <div class="panel" id="panel-staff-admin">
-      <div class="card">
-        <div class="card-title">Staff Management</div>
-        <div style="margin-bottom:16px;">
-          <button class="btn-primary btn-sm" onclick="showAddStaffModal()">+ Add Staff Member</button>
+        <div class="card">
+          <div class="card-title">Privileges (Click to select)</div>
+          <div class="priv-grid" id="priv-list">
+            <div class="priv-tag" onclick="togglePriv(this)">🍳 Free breakfast</div>
+            <div class="priv-tag" onclick="togglePriv(this)">💆 Spa access</div>
+            <div class="priv-tag" onclick="togglePriv(this)">🏊 Pool access</div>
+            <div class="priv-tag" onclick="togglePriv(this)">💪 Gym access</div>
+            <div class="priv-tag" onclick="togglePriv(this)">⏰ Late checkout</div>
+            <div class="priv-tag" onclick="togglePriv(this)">🕐 Early check-in</div>
+            <div class="priv-tag" onclick="togglePriv(this)">✈️ Airport transfer</div>
+            <div class="priv-tag" onclick="togglePriv(this)">🍷 F&B discount 20%</div>
+            <div class="priv-tag" onclick="togglePriv(this)">⬆️ Room upgrade</div>
+            <div class="priv-tag" onclick="togglePriv(this)">🍾 Complimentary minibar</div>
+            <div class="priv-tag" onclick="togglePriv(this)">💼 Business lounge</div>
+            <div class="priv-tag" onclick="togglePriv(this)">👔 Laundry service</div>
+            <div class="priv-tag" onclick="togglePriv(this)">⭐ Concierge priority</div>
+            <div class="priv-tag" onclick="togglePriv(this)">🎁 Welcome amenity</div>
+            <div class="priv-tag" onclick="togglePriv(this)">📶 Premium Wi-Fi</div>
+          </div>
         </div>
-        <div style="overflow-x:auto;">
-          <table class="data">
-            <thead><tr><th>Username</th><th>Full Name</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead>
-            <tbody id="staff-users-tbody"></tbody>
-          </table>
+        <div class="card">
+          <div class="card-title">Special Notes</div>
+          <textarea id="f-notes" rows="3" style="width:100%; padding:9px; border:1px solid #ddd; border-radius:7px;" placeholder="Any special requests, VIP notes, dietary requirements..."></textarea>
+        </div>
+        <button class="btn-primary" onclick="staffAddGuest()">Save Guest & Generate Card</button>
+      </div>
+      
+      <!-- STAFF: Scanner -->
+      <div class="panel" id="panel-staff-scanner">
+        <div class="card">
+          <div class="card-title">QR Code Scanner / Guest Lookup</div>
+          <div class="scanner-box" onclick="simulateScan()">
+            <div class="scan-icon">📷</div>
+            <div style="font-weight:600; margin:8px 0;">Click to simulate a scan</div>
+            <div class="scan-id-row" onclick="event.stopPropagation()">
+              <input type="text" id="staff-scan-id" placeholder="Search by Guest ID, Room, or Name">
+              <button class="btn-ghost" onclick="staffLookupGuest()">Lookup</button>
+            </div>
+          </div>
+          <div id="staff-scan-result"></div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-title">System Activity Log</div>
-        <div id="activity-log"><div class="empty-state">No activity yet</div></div>
+      
+      <!-- STAFF: Admin Panel -->
+      <div class="panel" id="panel-staff-admin">
+        <div class="card">
+          <div class="card-title">Staff Management</div>
+          <div style="margin-bottom:16px;">
+            <button class="btn-primary btn-sm" onclick="showAddStaffModal()">+ Add Staff Member</button>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data">
+              <thead><tr><th>Username</th><th>Full Name</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="staff-users-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">System Activity Log</div>
+          <div id="activity-log"><div class="empty-state">No activity yet</div></div>
+        </div>
       </div>
+      
     </div>
-    
   </div>
 </div>
 
@@ -881,7 +991,7 @@
   </div>
 </div>
 
-<!-- View Guest Modal (Staff) -->
+<!-- View Guest Modal -->
 <div class="modal-overlay" id="viewguest-modal">
   <div class="modal-box">
     <div class="modal-title" id="viewguest-title">Guest Details</div>
@@ -936,22 +1046,20 @@ async function loadRemoteGuests() {
         useSheetSync = true;
         document.getElementById('sync-status').textContent = '☁️ Live Mode';
         document.getElementById('sync-status').classList.add('active');
-        console.log("✅ Connected to Google Sheets via Apps Script");
+        console.log("✅ Connected to Google Sheets");
         showToast("Live data from Google Sheets");
         saveGuestsLocal();
         return true;
       }
     }
   } catch(e) {
-    console.warn("Apps Script not configured, using local storage", e);
+    console.warn("SheetDB not configured, using local storage", e);
   }
   
-  // Fallback to localStorage
   const local = localStorage.getItem("shr_guests");
   if (local) {
     guests = JSON.parse(local);
   } else {
-    // Default data
     guests = [
       { id:"SHR-1001", title:"Ms.", first:"Hodan", last:"Ahmed", room:"805", checkin:"2026-04-10", checkout:"2026-04-20", email:"hodan@example.com", phone:"+97450001234", nationality:"Somalia", type:"Privilege Guest", privileges:["🍳 Free breakfast","🏊 Pool access"], status:"Active", scans:3, notes:"VIP guest - prefers quiet room", issued:"2026-04-10", emailVerified:true },
       { id:"SHR-1002", title:"Mr.", first:"John", last:"Smith", room:"1205", checkin:"2026-04-12", checkout:"2026-04-18", email:"john@example.com", phone:"+97451234567", nationality:"UK", type:"VIP", privileges:["🍳 Free breakfast","💪 Gym access"], status:"Active", scans:2, notes:"Birthday celebration", issued:"2026-04-12", emailVerified:true },
@@ -961,61 +1069,10 @@ async function loadRemoteGuests() {
   return false;
 }
 
-async function syncGuestsToSheet() {
-  if (!useSheetSync) return false;
-  try {
-    // Sync only the latest guest for demo purposes
-    const lastGuest = guests[guests.length - 1];
-    if (lastGuest && !lastGuest._synced) {
-      const response = await fetch(SHEETDB_API, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          action: 'addGuest',
-          guest: {
-            ...lastGuest,
-            privileges: Array.isArray(lastGuest.privileges) ? lastGuest.privileges.join(',') : lastGuest.privileges
-          }
-        })
-      });
-      if (response.ok) {
-        lastGuest._synced = true;
-        console.log("Guest synced to sheet");
-      }
-    }
-    localStorage.setItem("shr_guests", JSON.stringify(guests));
-    return true;
-  } catch(e) {
-    console.error("Sync error:", e);
-    return false;
-  }
-}
-
-async function updateGuestInSheet(guestId, updates) {
-  if (!useSheetSync) return false;
-  try {
-    const response = await fetch(SHEETDB_API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action: 'updateGuest',
-        guestId: guestId,
-        updates: updates
-      })
-    });
-    return response.ok;
-  } catch(e) {
-    console.error("Update error:", e);
-    return false;
-  }
-}
-
 function saveGuestsLocal() {
   localStorage.setItem("shr_guests", JSON.stringify(guests));
-  syncGuestsToSheet();
 }
 
-// ========== STAFF USERS ==========
 function loadStaffUsers() {
   const saved = localStorage.getItem("shr_staff");
   if (saved) {
@@ -1023,8 +1080,7 @@ function loadStaffUsers() {
   } else {
     staffUsers = [
       { id: '1', username: 'admin', password: 'admin123', fullname: 'System Administrator', role: 'admin', status: 'active' },
-      { id: '2', username: 'reception', password: 'reception123', fullname: 'Reception Manager', role: 'staff', status: 'active' },
-      { id: '3', username: 'sarah', password: 'sarah123', fullname: 'Sarah Wilson', role: 'staff', status: 'active' }
+      { id: '2', username: 'reception', password: 'reception123', fullname: 'Reception Manager', role: 'staff', status: 'active' }
     ];
     saveStaffUsers();
   }
@@ -1034,7 +1090,6 @@ function saveStaffUsers() {
   localStorage.setItem("shr_staff", JSON.stringify(staffUsers));
 }
 
-// ========== HELPER FUNCTIONS ==========
 function generateGuestId() {
   const lastId = guests.length > 0 ? Math.max(...guests.map(g => parseInt(g.id.split('-')[1]))) : 1000;
   return `SHR-${lastId + 1}`;
@@ -1103,12 +1158,16 @@ function guestLogin() {
     
     document.getElementById('login-page').style.display = 'none';
     document.getElementById('main-app').classList.add('active');
-    document.getElementById('app-subtitle').textContent = 'Guest Portal';
-    document.getElementById('user-name').textContent = `${guest.title} ${guest.first} ${guest.last}`;
-    document.getElementById('user-role').textContent = guest.type;
-    document.getElementById('user-avatar').textContent = guest.first.charAt(0);
     
-    document.querySelectorAll('.staff-only').forEach(btn => btn.style.display = 'none');
+    // Update sidebar for guest
+    document.getElementById('sidebar-avatar').textContent = guest.first.charAt(0);
+    document.getElementById('sidebar-name').textContent = `${guest.first} ${guest.last}`;
+    document.getElementById('sidebar-role').textContent = guest.type;
+    document.getElementById('page-title').textContent = 'My Digital Card';
+    
+    // Show guest menu, hide staff menu
+    document.querySelectorAll('.guest-only').forEach(el => el.style.display = 'flex');
+    document.querySelectorAll('.staff-only').forEach(el => el.style.display = 'none');
     
     loadGuestDashboard();
     showToast(`Welcome back, ${guest.first}!`);
@@ -1203,15 +1262,23 @@ function staffLogin() {
     
     document.getElementById('login-page').style.display = 'none';
     document.getElementById('main-app').classList.add('active');
-    document.getElementById('app-subtitle').textContent = 'Staff Dashboard';
-    document.getElementById('user-name').textContent = staff.fullname;
-    document.getElementById('user-role').textContent = staff.role === 'admin' ? 'Administrator' : 'Staff';
-    document.getElementById('user-avatar').textContent = staff.fullname.charAt(0);
     
-    document.querySelectorAll('.staff-only').forEach(btn => btn.style.display = 'block');
+    // Update sidebar for staff
+    document.getElementById('sidebar-avatar').textContent = staff.fullname.charAt(0);
+    document.getElementById('sidebar-name').textContent = staff.fullname;
+    document.getElementById('sidebar-role').textContent = staff.role === 'admin' ? 'Administrator' : 'Staff';
+    document.getElementById('page-title').textContent = 'Guest Management';
     
-    showPanel('staff-guests');
+    // Show staff menu, hide guest menu
+    document.querySelectorAll('.guest-only').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.staff-only').forEach(el => el.style.display = 'flex');
+    
+    // Set active menu item
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    document.querySelector('.nav-item[data-panel="staff-guests"]').classList.add('active');
+    
     renderStaffTable();
+    renderStaffUsersTable();
     addActivityLog(`${staff.fullname} logged in`, 'staff');
     showToast(`Welcome, ${staff.fullname}!`);
   } else {
@@ -1236,17 +1303,32 @@ function logout() {
   switchLoginTab('guest');
 }
 
-// ========== STAFF PANEL FUNCTIONS ==========
+// ========== PANEL NAVIGATION ==========
 function showPanel(panelId) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.getElementById(`panel-${panelId}`).classList.add('active');
-  document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-  if (event && event.target) event.target.classList.add('active');
+  
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  if (event && event.target) {
+    const navItem = event.target.closest('.nav-item');
+    if (navItem) navItem.classList.add('active');
+  }
+  
+  // Update page title
+  const titles = {
+    'guest-dashboard': 'My Digital Card',
+    'staff-guests': 'Guest Management',
+    'staff-add': 'Add Guest',
+    'staff-scanner': 'QR Scanner',
+    'staff-admin': 'Admin Panel'
+  };
+  document.getElementById('page-title').textContent = titles[panelId] || 'Dashboard';
   
   if (panelId === 'staff-guests') renderStaffTable();
   if (panelId === 'staff-admin') renderStaffUsersTable();
 }
 
+// ========== STAFF FUNCTIONS ==========
 function renderStaffTable() {
   const search = document.getElementById('staff-search')?.value.toLowerCase() || '';
   const filtered = guests.filter(g => 
@@ -1359,8 +1441,7 @@ function staffAddGuest() {
     scans: 0,
     notes: document.getElementById('f-notes').value.trim(),
     issued: new Date().toISOString().split('T')[0],
-    emailVerified: false,
-    _synced: false
+    emailVerified: false
   };
   
   guests.push(newGuest);
